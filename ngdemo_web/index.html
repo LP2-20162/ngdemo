@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Angular demo </title>
+</head>
+
+<body>
+    <div ng-controller='TestCtr'>
+        <br />
+        <input ng-model="precio" ng-change='save()' />
+        <br />
+        <input type="number" name="cantidad" ng-model="cantidad" />
+        <br/>
+        <br/> Total: {{ precio * cantidad }}
+    </div>
+    <script src="bower_components/angular/angular.min.js"></script>
+
+
+<script type="text/javascript">
+
+var app=angular.module('app', []);
+
+app.controller('TestCtr', function ($scope) {
+    $scope.precio=23;
+    $scope.save = function  () {
+        console.log('precio='+$scope.precio);
+    }
+});
+
+</script>
+
+</body>
+
+</html>

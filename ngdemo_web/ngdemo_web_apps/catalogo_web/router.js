@@ -1,5 +1,6 @@
 app
 
+//algo
 .config(function($stateProvider, $urlRouterProvider) {
 
   $stateProvider

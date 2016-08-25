@@ -1,0 +1,8 @@
+<div ng-controller='TestCtr'>
+        <br />
+        <input ng-model="precio" ng-change='save()' required/>
+        <br />
+        <input type="number" name="cantidad" ng-model="cantidad" />
+        <br/>
+        <br/> Total: {{ precio * cantidad }}
+    </div>

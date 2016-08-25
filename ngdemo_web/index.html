@@ -7,30 +7,16 @@
 </head>
 
 <body>
-    <div ng-controller='TestCtr'>
-        <br />
-        <input ng-model="precio" ng-change='save()' />
-        <br />
-        <input type="number" name="cantidad" ng-model="cantidad" />
-        <br/>
-        <br/> Total: {{ precio * cantidad }}
-    </div>
-    <script src="bower_components/angular/angular.min.js"></script>
+	<a ui-sref="test">Test</a>
 
+    <div ui-view></div>
+    
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 
-<script type="text/javascript">
+<script src="app/settings.js"></script>
+<script src="ngdemo_web_apps/catalogo_web/router.js"></script>
 
-var app=angular.module('app', []);
-
-app.controller('TestCtr', function ($scope) {
-    $scope.precio=23;
-    $scope.save = function  () {
-        console.log('precio='+$scope.precio);
-    }
-});
-
-</script>
-
+<script src="ngdemo_web_apps/catalogo_web/controllers/test.js"></script>
 </body>
-
 </html>

@@ -1,3 +1,4 @@
+'''
 from django.contrib import admin
 from planilla.models import Empleado, Empresa
 
@@ -11,3 +12,4 @@ class EmpleadoAdmin(admin.ModelAdmin):
     list_per_page = 2
 
 admin.site.register(Empleado, EmpleadoAdmin)
+'''

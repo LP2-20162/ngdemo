@@ -38,7 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'planilla'
+    'rest_framework',
+
+    'planilla',
+    'planilla_api',
 ]
 
 MIDDLEWARE = [

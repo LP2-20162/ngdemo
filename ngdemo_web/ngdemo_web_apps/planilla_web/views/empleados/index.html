@@ -1,15 +1,18 @@
 <div ng-controller='EmpleadoCtr'>
-        <br />
-        <input ng-model="precio" ng-change='save()' required/>
-        <br />
-        <input type="number" name="cantidad" ng-model="cantidad" />
+        <br />nombres
+        <input ng-model="empleado.nombres" required/>
+        <br />apellidos
+        <input ng-model="empleado.apellidos" />
         <br/>
-        <br/> Total: {{ precio * cantidad }}
+        <br/> <button type="button" ng-click="save()">Save</button>
 
 <table>
 <tr ng-repeat="d in lista">
 	<td> {{d.nombres }} </td>
 	<td> {{d.apellidos }} </td>
+	<td> <a href="" ng-click="sel(d)">Edit</a> </td>
+	<td> <a href="" ng-click="delete(d)">x</a> </td>
+
 </tr>
 </table>
 

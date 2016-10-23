@@ -1,10 +1,14 @@
 app
-    .factory('authInterceptorService', function($injector) {
-        var accessToken = 'XtejIDLPxV4wbFrLtQ7orN7ClJ7Q0A';
+    .factory('authInterceptorService', function($injector, localStorageService) {
+
+
         return {
             request: function(configs) {
                 configs.headers = configs.headers || {};
-                configs.headers.Authorization = 'Bearer ' + accessToken;
+                var storage = localStorageService.get('miSession');
+                if (storage) {
+                    configs.headers.Authorization = 'Bearer ' + storage.accessToken;
+                }
                 return configs;
             },
             response: ''

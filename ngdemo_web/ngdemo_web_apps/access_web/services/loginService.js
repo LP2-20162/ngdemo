@@ -1,6 +1,6 @@
 app
 
-    .factory('loginService', function($http) {
+    .factory('loginService', function($http, localStorageService) {
     var url = 'http://localhost:8000/o/token/';
     return {
         login: function(d) {
@@ -16,8 +16,16 @@ app
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 }
-            }).then(function(r) {
+            }).success(function(r) {
+                localStorageService.set('miSession', {
+                    accessToken: r.access_token,
+                    isAuth: true,
+                    userName: d.userName,
+                });
                 return r;
+            }).error(function(err) {
+                localStorageService.remove('miSession');
+                return err;
             });
         },
         salir: "",

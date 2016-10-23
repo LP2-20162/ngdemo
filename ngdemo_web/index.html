@@ -7,26 +7,27 @@
 </head>
 
 <body>
-	<a ui-sref="test">Test</a><a ui-sref="form">Form</a>
-	<br>
-	<a ui-sref="empleados">empleados</a>
-
+    <a ui-sref="login">Login</a>
+    <br>
+    <br>
+    <a ui-sref="test">Test</a><a ui-sref="form">Form</a>
+    <br>
+    <a ui-sref="empleados">empleados</a>
     <div ui-view></div>
-    
-<script src="bower_components/angular/angular.min.js"></script>
-<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-<script src="bower_components/angular-resource/angular-resource.min.js"></script>
-
-<script src="app/settings.js"></script>
-<script src="app/authService.js"></script>
-
-<script src="ngdemo_web_apps/catalogo_web/router.js"></script>
-<script src="ngdemo_web_apps/catalogo_web/controllers/test.js"></script>
-<script src="ngdemo_web_apps/catalogo_web/controllers/form.js"></script>
-
-<script src="ngdemo_web_apps/planilla_web/router.js"></script>
-<script src="ngdemo_web_apps/planilla_web/services/planillaService.js"></script>
-<script src="ngdemo_web_apps/planilla_web/controllers/empleado.js"></script>
-
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="app/settings.js"></script>
+    <script src="app/authService.js"></script>
+    <script src="ngdemo_web_apps/access_web/router.js"></script>
+    <script src="ngdemo_web_apps/access_web/services/loginService.js"></script>
+    <script src="ngdemo_web_apps/access_web/controllers/login.js"></script>
+    <script src="ngdemo_web_apps/catalogo_web/router.js"></script>
+    <script src="ngdemo_web_apps/catalogo_web/controllers/test.js"></script>
+    <script src="ngdemo_web_apps/catalogo_web/controllers/form.js"></script>
+    <script src="ngdemo_web_apps/planilla_web/router.js"></script>
+    <script src="ngdemo_web_apps/planilla_web/services/planillaService.js"></script>
+    <script src="ngdemo_web_apps/planilla_web/controllers/empleado.js"></script>
 </body>
+
 </html>

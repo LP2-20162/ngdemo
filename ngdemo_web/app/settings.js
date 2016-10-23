@@ -1,11 +1,12 @@
 var app = angular.module('app', [
-
     'ui.router',
     'ngResource',
-
 ]);
-
 app.config(['$resourceProvider', function($resourceProvider) {
     // Don't strip trailing slashes from calculated URLs
     $resourceProvider.defaults.stripTrailingSlashes = false;
 }]);
+app.config(function($httpProvider) {
+    $httpProvider.interceptors.push('authInterceptorService');
+    console.log('authInterceptorService is loaded');
+});

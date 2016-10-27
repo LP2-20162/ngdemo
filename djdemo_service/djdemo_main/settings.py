@@ -130,3 +130,4 @@ REST_FRAMEWORKx = {
         'rest_framework.permissions.IsAuthenticated',
     )
 }
+

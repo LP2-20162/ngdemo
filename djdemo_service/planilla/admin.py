@@ -1,5 +1,7 @@
 from django.contrib import admin
-from planilla.models import Empleado, Empresa, Area
+from planilla.models import User, Empleado, Empresa, Area
+
+admin.site.register(User)
 
 # Register your models here.
 admin.site.register(Empresa)

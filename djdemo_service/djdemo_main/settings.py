@@ -131,3 +131,4 @@ REST_FRAMEWORKx = {
     )
 }
 
+AUTH_USER_MODEL = 'planilla.User'

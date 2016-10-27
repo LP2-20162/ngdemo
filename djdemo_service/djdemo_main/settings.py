@@ -122,7 +122,7 @@ STATIC_URL = '/static/'
 
 CORS_ORIGIN_ALLOW_ALL = True
 
-REST_FRAMEWORK = {
+REST_FRAMEWORKx = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'oauth2_provider.ext.rest_framework.OAuth2Authentication',
     ),
